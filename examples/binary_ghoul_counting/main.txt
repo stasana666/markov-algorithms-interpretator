@@ -1,0 +1,92 @@
+init {
+    0 _start_ -> _start_ 0
+    1 _start_ -> _start_ 1
+
+    _end_ 0 -> 0 _end_
+    _end_ 1 -> 1 _end_
+}
+
+finish {
+    _finish_ -> _finishRemoveStart_ _terminate_ _finishRemoveRight_
+
+    remove right {
+        _finishRemoveRight_ 1 -> _finishRemoveRight_
+        _finishRemoveRight_ 0 -> _finishRemoveRight_
+        _finishRemoveRight_ _endSubstruction_ -> _finishRemoveRight_
+        _finishRemoveRight_ _minus_ -> _finishRemoveRight_
+        _finishRemoveRight_ _end_ ->
+    }
+
+    remove start {
+        0 _finishRemoveStart_ -> _finishRemoveStart_ 0
+        1 _finishRemoveStart_ -> _finishRemoveStart_ 1
+        _numberDelimiter_ _finishRemoveStart_ -> _finishRemoveStart_ _
+        _start_ _finishRemoveStart_ -> _finishRemoveStart_
+        _finishRemoveStart_ -> 
+    }
+
+    _terminate_ =>
+}
+
+_start_ _end_ -> _finish_
+
+_current_ -> _copy_
+
+remove first zero {
+    _numberDelimiter_ 0 0 -> _numberDelimiter_ 0
+    _numberDelimiter_ 0 1 -> _numberDelimiter_ 1
+}
+
+copy block {
+    _copy_ -> _awaitСopy_ _copyMoveRight_
+
+    copy_move_right {
+        _copyMoveRight_ 0 -> 0 _copyMoveRight_
+        _copyMoveRight_ 1 -> 1 _copyMoveRight_
+        _copyMoveRight_ _end_ -> _copyMoveLeft_ _copyDelimiter_ _end_
+    }
+
+    copy_move_left {
+        0 _copyMoveLeft_ -> _copyMoveLeft_ 0 _carry0_
+        1 _copyMoveLeft_ -> _copyMoveLeft_ 1 _carry1_
+    }
+
+    copy_0 {
+        _carry0_ _copyDelimiter_ -> _copyDelimiter_ 0
+        _carry0_ 1 -> 1 _carry0_
+        _carry0_ 0 -> 0 _carry0_
+    }
+
+    copy_1 {
+        _carry1_ _copyDelimiter_ -> _copyDelimiter_ 1
+        _carry1_ 1 -> 1 _carry1_
+        _carry1_ 0 -> 0 _carry1_
+    }
+
+    _awaitСopy_ _copyMoveLeft_ -> _copyEnd_
+    _copyEnd_->
+    _copyDelimiter_ -> _startSubstruction_
+}
+
+substruction block {
+    _startSubstruction_ -> _awaitSubstruction_ _substructionMoveRight_
+
+    move right {
+        _substructionMoveRight_ 1 -> 1 _substructionMoveRight_
+        _substructionMoveRight_ 0 -> 0 _substructionMoveRight_
+        _substructionMoveRight_ _end_ -> _minus_ _minus_ _minus_ _minus_ _minus_ _minus_ _minus_ _endSubstruction_ _end_
+    }
+
+    minus {
+        1 _minus_ -> 0
+        0 _minus_ -> _minus_ 1
+        _awaitSubstruction_ _minus_ -> _finish_
+    }
+
+    _endSubstruction_->
+    _awaitSubstruction_-> _numberDelimiter_ _current_
+}
+
+_start_ 1 -> _start_ _current_ 1
+0 -> _start_ _end_ 0
+1 -> _start_ _end_ 1

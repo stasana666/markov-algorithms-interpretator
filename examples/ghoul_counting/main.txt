@@ -1,0 +1,262 @@
+_end_ 0 -> 0 _end_
+_end_ 1 -> 1 _end_
+_end_ 2 -> 2 _end_
+_end_ 3 -> 3 _end_
+_end_ 4 -> 4 _end_
+_end_ 5 -> 5 _end_
+_end_ 6 -> 6 _end_
+_end_ 7 -> 7 _end_
+_end_ 8 -> 8 _end_
+_end_ 9 -> 9 _end_
+_finish_ -> _finishMoveLeft_ _terminate_ _finishMoveRight_
+_start_ _finishMoveLeft_ -> 
+_finishMoveRight_ _end_ -> 
+_numberDelimiter_ _finishMoveLeft_ -> _finishMoveLeft_ _
+2 _finishMoveLeft_ -> _finishMoveLeft_ 2
+_carry[0]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[0]_
+_carry[2]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[2]_
+_carry[4]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[4]_
+0 _finishMoveLeft_ -> _finishMoveLeft_ 0
+_carry[5]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[5]_
+5 _finishMoveLeft_ -> _finishMoveLeft_ 5
+_startCopy_ _finishMoveLeft_ -> _finishMoveLeft_ _startCopy_
+_carry[1]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[1]_
+7 _finishMoveLeft_ -> _finishMoveLeft_ 7
+_carry[9]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[9]_
+1 _finishMoveLeft_ -> _finishMoveLeft_ 1
+9 _finishMoveLeft_ -> _finishMoveLeft_ 9
+_numberDelimiter_ _finishMoveLeft_ -> _finishMoveLeft_ _numberDelimiter_
+_terminate_ _finishMoveLeft_ -> _finishMoveLeft_ _terminate_
+_subMoveRight_ _finishMoveLeft_ -> _finishMoveLeft_ _subMoveRight_
+_awaitSub_ _finishMoveLeft_ -> _finishMoveLeft_ _awaitSub_
+_start_ _finishMoveLeft_ -> _finishMoveLeft_ _start_
+_copyMoveRight_ _finishMoveLeft_ -> _finishMoveLeft_ _copyMoveRight_
+_copyMoveLeft_ _finishMoveLeft_ -> _finishMoveLeft_ _copyMoveLeft_
+_awaitCopy_ _finishMoveLeft_ -> _finishMoveLeft_ _awaitCopy_
+_finish_ _finishMoveLeft_ -> _finishMoveLeft_ _finish_
+_carry[6]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[6]_
+3 _finishMoveLeft_ -> _finishMoveLeft_ 3
+_minus_ _finishMoveLeft_ -> _finishMoveLeft_ _minus_
+_carry[8]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[8]_
+4 _finishMoveLeft_ -> _finishMoveLeft_ 4
+_ _finishMoveLeft_ -> _finishMoveLeft_ _
+8 _finishMoveLeft_ -> _finishMoveLeft_ 8
+_carry[7]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[7]_
+_copyDelimiter_ _finishMoveLeft_ -> _finishMoveLeft_ _copyDelimiter_
+_startSub_ _finishMoveLeft_ -> _finishMoveLeft_ _startSub_
+_carry[3]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[3]_
+_finishMoveLeft_ _finishMoveLeft_ -> _finishMoveLeft_ _finishMoveLeft_
+_end_ _finishMoveLeft_ -> _finishMoveLeft_ _end_
+6 _finishMoveLeft_ -> _finishMoveLeft_ 6
+_finishMoveRight_ _finishMoveLeft_ -> _finishMoveLeft_ _finishMoveRight_
+_current_ _finishMoveLeft_ -> _finishMoveLeft_ _current_
+_finishMoveRight_ 2 -> _finishMoveRight_
+_finishMoveRight_ _carry[0]_ -> _finishMoveRight_
+_finishMoveRight_ _carry[2]_ -> _finishMoveRight_
+_finishMoveRight_ _carry[4]_ -> _finishMoveRight_
+_finishMoveRight_ 0 -> _finishMoveRight_
+_finishMoveRight_ _carry[5]_ -> _finishMoveRight_
+_finishMoveRight_ 5 -> _finishMoveRight_
+_finishMoveRight_ _startCopy_ -> _finishMoveRight_
+_finishMoveRight_ _carry[1]_ -> _finishMoveRight_
+_finishMoveRight_ 7 -> _finishMoveRight_
+_finishMoveRight_ _carry[9]_ -> _finishMoveRight_
+_finishMoveRight_ 1 -> _finishMoveRight_
+_finishMoveRight_ 9 -> _finishMoveRight_
+_finishMoveRight_ _numberDelimiter_ -> _finishMoveRight_
+_finishMoveRight_ _terminate_ -> _finishMoveRight_
+_finishMoveRight_ _subMoveRight_ -> _finishMoveRight_
+_finishMoveRight_ _awaitSub_ -> _finishMoveRight_
+_finishMoveRight_ _start_ -> _finishMoveRight_
+_finishMoveRight_ _copyMoveRight_ -> _finishMoveRight_
+_finishMoveRight_ _copyMoveLeft_ -> _finishMoveRight_
+_finishMoveRight_ _awaitCopy_ -> _finishMoveRight_
+_finishMoveRight_ _finish_ -> _finishMoveRight_
+_finishMoveRight_ _carry[6]_ -> _finishMoveRight_
+_finishMoveRight_ 3 -> _finishMoveRight_
+_finishMoveRight_ _minus_ -> _finishMoveRight_
+_finishMoveRight_ _carry[8]_ -> _finishMoveRight_
+_finishMoveRight_ 4 -> _finishMoveRight_
+_finishMoveRight_ _ -> _finishMoveRight_
+_finishMoveRight_ 8 -> _finishMoveRight_
+_finishMoveRight_ _carry[7]_ -> _finishMoveRight_
+_finishMoveRight_ _copyDelimiter_ -> _finishMoveRight_
+_finishMoveRight_ _startSub_ -> _finishMoveRight_
+_finishMoveRight_ _carry[3]_ -> _finishMoveRight_
+_finishMoveRight_ _finishMoveLeft_ -> _finishMoveRight_
+_finishMoveRight_ _end_ -> _finishMoveRight_
+_finishMoveRight_ 6 -> _finishMoveRight_
+_finishMoveRight_ _finishMoveRight_ -> _finishMoveRight_
+_finishMoveRight_ _current_ -> _finishMoveRight_
+_terminate_=>
+_numberDelimiter_ 0 0 -> _numberDelimiter_ 0
+_numberDelimiter_ 0 1 -> _numberDelimiter_ 1
+_numberDelimiter_ 0 2 -> _numberDelimiter_ 2
+_numberDelimiter_ 0 3 -> _numberDelimiter_ 3
+_numberDelimiter_ 0 4 -> _numberDelimiter_ 4
+_numberDelimiter_ 0 5 -> _numberDelimiter_ 5
+_numberDelimiter_ 0 6 -> _numberDelimiter_ 6
+_numberDelimiter_ 0 7 -> _numberDelimiter_ 7
+_numberDelimiter_ 0 8 -> _numberDelimiter_ 8
+_numberDelimiter_ 0 9 -> _numberDelimiter_ 9
+_current_ -> _startCopy_
+_startCopy_ -> _awaitCopy_ _copyMoveRight_
+_copyMoveRight_ 0 -> 0 _copyMoveRight_
+_copyMoveRight_ 1 -> 1 _copyMoveRight_
+_copyMoveRight_ 2 -> 2 _copyMoveRight_
+_copyMoveRight_ 3 -> 3 _copyMoveRight_
+_copyMoveRight_ 4 -> 4 _copyMoveRight_
+_copyMoveRight_ 5 -> 5 _copyMoveRight_
+_copyMoveRight_ 6 -> 6 _copyMoveRight_
+_copyMoveRight_ 7 -> 7 _copyMoveRight_
+_copyMoveRight_ 8 -> 8 _copyMoveRight_
+_copyMoveRight_ 9 -> 9 _copyMoveRight_
+_copyMoveRight_ _end_ -> _copyMoveLeft_ _copyDelimiter_ _end_
+0 _copyMoveLeft_ -> _copyMoveLeft_ 0 _carry[0]_
+1 _copyMoveLeft_ -> _copyMoveLeft_ 1 _carry[1]_
+2 _copyMoveLeft_ -> _copyMoveLeft_ 2 _carry[2]_
+3 _copyMoveLeft_ -> _copyMoveLeft_ 3 _carry[3]_
+4 _copyMoveLeft_ -> _copyMoveLeft_ 4 _carry[4]_
+5 _copyMoveLeft_ -> _copyMoveLeft_ 5 _carry[5]_
+6 _copyMoveLeft_ -> _copyMoveLeft_ 6 _carry[6]_
+7 _copyMoveLeft_ -> _copyMoveLeft_ 7 _carry[7]_
+8 _copyMoveLeft_ -> _copyMoveLeft_ 8 _carry[8]_
+9 _copyMoveLeft_ -> _copyMoveLeft_ 9 _carry[9]_
+_carry[0]_ 0 -> 0 _carry[0]_
+_carry[0]_ 1 -> 1 _carry[0]_
+_carry[0]_ 2 -> 2 _carry[0]_
+_carry[0]_ 3 -> 3 _carry[0]_
+_carry[0]_ 4 -> 4 _carry[0]_
+_carry[0]_ 5 -> 5 _carry[0]_
+_carry[0]_ 6 -> 6 _carry[0]_
+_carry[0]_ 7 -> 7 _carry[0]_
+_carry[0]_ 8 -> 8 _carry[0]_
+_carry[0]_ 9 -> 9 _carry[0]_
+_carry[1]_ 0 -> 0 _carry[1]_
+_carry[1]_ 1 -> 1 _carry[1]_
+_carry[1]_ 2 -> 2 _carry[1]_
+_carry[1]_ 3 -> 3 _carry[1]_
+_carry[1]_ 4 -> 4 _carry[1]_
+_carry[1]_ 5 -> 5 _carry[1]_
+_carry[1]_ 6 -> 6 _carry[1]_
+_carry[1]_ 7 -> 7 _carry[1]_
+_carry[1]_ 8 -> 8 _carry[1]_
+_carry[1]_ 9 -> 9 _carry[1]_
+_carry[2]_ 0 -> 0 _carry[2]_
+_carry[2]_ 1 -> 1 _carry[2]_
+_carry[2]_ 2 -> 2 _carry[2]_
+_carry[2]_ 3 -> 3 _carry[2]_
+_carry[2]_ 4 -> 4 _carry[2]_
+_carry[2]_ 5 -> 5 _carry[2]_
+_carry[2]_ 6 -> 6 _carry[2]_
+_carry[2]_ 7 -> 7 _carry[2]_
+_carry[2]_ 8 -> 8 _carry[2]_
+_carry[2]_ 9 -> 9 _carry[2]_
+_carry[3]_ 0 -> 0 _carry[3]_
+_carry[3]_ 1 -> 1 _carry[3]_
+_carry[3]_ 2 -> 2 _carry[3]_
+_carry[3]_ 3 -> 3 _carry[3]_
+_carry[3]_ 4 -> 4 _carry[3]_
+_carry[3]_ 5 -> 5 _carry[3]_
+_carry[3]_ 6 -> 6 _carry[3]_
+_carry[3]_ 7 -> 7 _carry[3]_
+_carry[3]_ 8 -> 8 _carry[3]_
+_carry[3]_ 9 -> 9 _carry[3]_
+_carry[4]_ 0 -> 0 _carry[4]_
+_carry[4]_ 1 -> 1 _carry[4]_
+_carry[4]_ 2 -> 2 _carry[4]_
+_carry[4]_ 3 -> 3 _carry[4]_
+_carry[4]_ 4 -> 4 _carry[4]_
+_carry[4]_ 5 -> 5 _carry[4]_
+_carry[4]_ 6 -> 6 _carry[4]_
+_carry[4]_ 7 -> 7 _carry[4]_
+_carry[4]_ 8 -> 8 _carry[4]_
+_carry[4]_ 9 -> 9 _carry[4]_
+_carry[5]_ 0 -> 0 _carry[5]_
+_carry[5]_ 1 -> 1 _carry[5]_
+_carry[5]_ 2 -> 2 _carry[5]_
+_carry[5]_ 3 -> 3 _carry[5]_
+_carry[5]_ 4 -> 4 _carry[5]_
+_carry[5]_ 5 -> 5 _carry[5]_
+_carry[5]_ 6 -> 6 _carry[5]_
+_carry[5]_ 7 -> 7 _carry[5]_
+_carry[5]_ 8 -> 8 _carry[5]_
+_carry[5]_ 9 -> 9 _carry[5]_
+_carry[6]_ 0 -> 0 _carry[6]_
+_carry[6]_ 1 -> 1 _carry[6]_
+_carry[6]_ 2 -> 2 _carry[6]_
+_carry[6]_ 3 -> 3 _carry[6]_
+_carry[6]_ 4 -> 4 _carry[6]_
+_carry[6]_ 5 -> 5 _carry[6]_
+_carry[6]_ 6 -> 6 _carry[6]_
+_carry[6]_ 7 -> 7 _carry[6]_
+_carry[6]_ 8 -> 8 _carry[6]_
+_carry[6]_ 9 -> 9 _carry[6]_
+_carry[7]_ 0 -> 0 _carry[7]_
+_carry[7]_ 1 -> 1 _carry[7]_
+_carry[7]_ 2 -> 2 _carry[7]_
+_carry[7]_ 3 -> 3 _carry[7]_
+_carry[7]_ 4 -> 4 _carry[7]_
+_carry[7]_ 5 -> 5 _carry[7]_
+_carry[7]_ 6 -> 6 _carry[7]_
+_carry[7]_ 7 -> 7 _carry[7]_
+_carry[7]_ 8 -> 8 _carry[7]_
+_carry[7]_ 9 -> 9 _carry[7]_
+_carry[8]_ 0 -> 0 _carry[8]_
+_carry[8]_ 1 -> 1 _carry[8]_
+_carry[8]_ 2 -> 2 _carry[8]_
+_carry[8]_ 3 -> 3 _carry[8]_
+_carry[8]_ 4 -> 4 _carry[8]_
+_carry[8]_ 5 -> 5 _carry[8]_
+_carry[8]_ 6 -> 6 _carry[8]_
+_carry[8]_ 7 -> 7 _carry[8]_
+_carry[8]_ 8 -> 8 _carry[8]_
+_carry[8]_ 9 -> 9 _carry[8]_
+_carry[9]_ 0 -> 0 _carry[9]_
+_carry[9]_ 1 -> 1 _carry[9]_
+_carry[9]_ 2 -> 2 _carry[9]_
+_carry[9]_ 3 -> 3 _carry[9]_
+_carry[9]_ 4 -> 4 _carry[9]_
+_carry[9]_ 5 -> 5 _carry[9]_
+_carry[9]_ 6 -> 6 _carry[9]_
+_carry[9]_ 7 -> 7 _carry[9]_
+_carry[9]_ 8 -> 8 _carry[9]_
+_carry[9]_ 9 -> 9 _carry[9]_
+_carry[0]_ _copyDelimiter_ -> _copyDelimiter_ 0
+_carry[1]_ _copyDelimiter_ -> _copyDelimiter_ 1
+_carry[2]_ _copyDelimiter_ -> _copyDelimiter_ 2
+_carry[3]_ _copyDelimiter_ -> _copyDelimiter_ 3
+_carry[4]_ _copyDelimiter_ -> _copyDelimiter_ 4
+_carry[5]_ _copyDelimiter_ -> _copyDelimiter_ 5
+_carry[6]_ _copyDelimiter_ -> _copyDelimiter_ 6
+_carry[7]_ _copyDelimiter_ -> _copyDelimiter_ 7
+_carry[8]_ _copyDelimiter_ -> _copyDelimiter_ 8
+_carry[9]_ _copyDelimiter_ -> _copyDelimiter_ 9
+_awaitCopy_ _copyMoveLeft_ -> 
+_copyDelimiter_ -> _numberDelimiter_ _startSub_
+_startSub_ -> _awaitSub_ _subMoveRight_
+_subMoveRight_ 0 -> 0 _subMoveRight_
+_subMoveRight_ 1 -> 1 _subMoveRight_
+_subMoveRight_ 2 -> 2 _subMoveRight_
+_subMoveRight_ 3 -> 3 _subMoveRight_
+_subMoveRight_ 4 -> 4 _subMoveRight_
+_subMoveRight_ 5 -> 5 _subMoveRight_
+_subMoveRight_ 6 -> 6 _subMoveRight_
+_subMoveRight_ 7 -> 7 _subMoveRight_
+_subMoveRight_ 8 -> 8 _subMoveRight_
+_subMoveRight_ 9 -> 9 _subMoveRight_
+_subMoveRight_ _end_ -> _minus_ _minus_ _minus_ _minus_ _minus_ _minus_ _minus_ _end_
+0 _minus_ -> _minus_ 9
+1 _minus_ -> 0
+2 _minus_ -> 1
+3 _minus_ -> 2
+4 _minus_ -> 3
+5 _minus_ -> 4
+6 _minus_ -> 5
+7 _minus_ -> 6
+8 _minus_ -> 7
+9 _minus_ -> 8
+_awaitSub_ _minus_ -> _finish_
+_awaitSub_ -> _current_
+_start_ -> _start_ _current_
+ -> _start_ _end_
