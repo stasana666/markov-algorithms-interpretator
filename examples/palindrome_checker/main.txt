@@ -1,0 +1,47 @@
+_end_ a -> a _end_
+_end_ b -> b _end_
+_end_ c -> c _end_
+
+a _moveLeft_ -> _moveLeft_ a _carry[a]_
+b _moveLeft_ -> _moveLeft_ b _carry[b]_
+c _moveLeft_ -> _moveLeft_ c _carry[c]_
+
+_carry[a]_ a -> a _carry[a]_
+_carry[a]_ b -> b _carry[a]_
+_carry[a]_ c -> c _carry[a]_
+
+_carry[b]_ a -> a _carry[b]_
+_carry[b]_ b -> b _carry[b]_
+_carry[b]_ c -> c _carry[b]_
+
+_carry[c]_ a -> a _carry[c]_
+_carry[c]_ b -> b _carry[c]_
+_carry[c]_ c -> c _carry[c]_
+
+_carry[a]_ _delimiter_ -> _delimiter_ a
+_carry[b]_ _delimiter_ -> _delimiter_ b
+_carry[c]_ _delimiter_ -> _delimiter_ c
+
+_start_ _moveLeft_ -> _start_
+
+a _delimiter_ a -> _delimiter_
+b _delimiter_ b -> _delimiter_
+c _delimiter_ c -> _delimiter_
+
+a _delimiter_ -> a _answerNoDelimiter_
+b _delimiter_ -> b _answerNoDelimiter_
+c _delimiter_ -> c _answerNoDelimiter_
+
+a _answerNoDelimiter_ -> _answerNoDelimiter_
+b _answerNoDelimiter_ -> _answerNoDelimiter_
+c _answerNoDelimiter_ -> _answerNoDelimiter_
+
+_answerNoDelimiter_ a -> _answerNoDelimiter_
+_answerNoDelimiter_ b -> _answerNoDelimiter_
+_answerNoDelimiter_ c -> _answerNoDelimiter_
+
+_start_ _answerNoDelimiter_ _end_ => No
+_start_ _delimiter_ _end_ => Yes
+
+_end_ -> _moveLeft_ _delimiter_ _end_
+->_start_ _end_
