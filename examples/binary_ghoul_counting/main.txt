@@ -20,7 +20,7 @@ finish {
     remove start {
         0 _finishRemoveStart_ -> _finishRemoveStart_ 0
         1 _finishRemoveStart_ -> _finishRemoveStart_ 1
-        _numberDelimiter_ _finishRemoveStart_ -> _finishRemoveStart_ _
+        _numberDelimiter_ _finishRemoveStart_ -> _finishRemoveStart_ \n
         _start_ _finishRemoveStart_ -> _finishRemoveStart_
         _finishRemoveStart_ -> 
     }
