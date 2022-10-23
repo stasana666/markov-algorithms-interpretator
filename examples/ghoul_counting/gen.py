@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 alphabet = list(map(str, range(10)))
-output_alphabet = alphabet + ["_"]
+output_alphabet = alphabet + ["\\n"]
 
 terms = set()
 
@@ -69,7 +69,7 @@ def main():
         rule("finish", "finishMoveLeft terminate finishMoveRight"),
         rule("start finishMoveLeft", ""),
         rule("finishMoveRight end", ""),
-        rule("numberDelimiter finishMoveLeft", "finishMoveLeft _")
+        rule("numberDelimiter finishMoveLeft", "finishMoveLeft \\n")
     ] + [
         rule(f"{i} finishMoveLeft", f"finishMoveLeft {i}") for i in terms
     ] + [

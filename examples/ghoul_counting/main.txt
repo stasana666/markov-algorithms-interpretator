@@ -11,83 +11,83 @@ _end_ 9 -> 9 _end_
 _finish_ -> _finishMoveLeft_ _terminate_ _finishMoveRight_
 _start_ _finishMoveLeft_ -> 
 _finishMoveRight_ _end_ -> 
-_numberDelimiter_ _finishMoveLeft_ -> _finishMoveLeft_ _
-2 _finishMoveLeft_ -> _finishMoveLeft_ 2
-_carry[0]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[0]_
-_carry[2]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[2]_
-_carry[4]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[4]_
+_numberDelimiter_ _finishMoveLeft_ -> _finishMoveLeft_ \n
+\n _finishMoveLeft_ -> _finishMoveLeft_ \n
 0 _finishMoveLeft_ -> _finishMoveLeft_ 0
-_carry[5]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[5]_
-5 _finishMoveLeft_ -> _finishMoveLeft_ 5
-_startCopy_ _finishMoveLeft_ -> _finishMoveLeft_ _startCopy_
-_carry[1]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[1]_
-7 _finishMoveLeft_ -> _finishMoveLeft_ 7
-_carry[9]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[9]_
-1 _finishMoveLeft_ -> _finishMoveLeft_ 1
-9 _finishMoveLeft_ -> _finishMoveLeft_ 9
-_numberDelimiter_ _finishMoveLeft_ -> _finishMoveLeft_ _numberDelimiter_
-_terminate_ _finishMoveLeft_ -> _finishMoveLeft_ _terminate_
-_subMoveRight_ _finishMoveLeft_ -> _finishMoveLeft_ _subMoveRight_
-_awaitSub_ _finishMoveLeft_ -> _finishMoveLeft_ _awaitSub_
+_carry[6]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[6]_
 _start_ _finishMoveLeft_ -> _finishMoveLeft_ _start_
-_copyMoveRight_ _finishMoveLeft_ -> _finishMoveLeft_ _copyMoveRight_
+_carry[2]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[2]_
+3 _finishMoveLeft_ -> _finishMoveLeft_ 3
+_terminate_ _finishMoveLeft_ -> _finishMoveLeft_ _terminate_
+_carry[9]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[9]_
 _copyMoveLeft_ _finishMoveLeft_ -> _finishMoveLeft_ _copyMoveLeft_
 _awaitCopy_ _finishMoveLeft_ -> _finishMoveLeft_ _awaitCopy_
-_finish_ _finishMoveLeft_ -> _finishMoveLeft_ _finish_
-_carry[6]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[6]_
-3 _finishMoveLeft_ -> _finishMoveLeft_ 3
-_minus_ _finishMoveLeft_ -> _finishMoveLeft_ _minus_
+_carry[5]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[5]_
+7 _finishMoveLeft_ -> _finishMoveLeft_ 7
 _carry[8]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[8]_
+_end_ _finishMoveLeft_ -> _finishMoveLeft_ _end_
+_finish_ _finishMoveLeft_ -> _finishMoveLeft_ _finish_
+_carry[4]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[4]_
+_copyDelimiter_ _finishMoveLeft_ -> _finishMoveLeft_ _copyDelimiter_
+_subMoveRight_ _finishMoveLeft_ -> _finishMoveLeft_ _subMoveRight_
+6 _finishMoveLeft_ -> _finishMoveLeft_ 6
+_finishMoveLeft_ _finishMoveLeft_ -> _finishMoveLeft_ _finishMoveLeft_
+_awaitSub_ _finishMoveLeft_ -> _finishMoveLeft_ _awaitSub_
+_current_ _finishMoveLeft_ -> _finishMoveLeft_ _current_
+_carry[3]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[3]_
 4 _finishMoveLeft_ -> _finishMoveLeft_ 4
-_ _finishMoveLeft_ -> _finishMoveLeft_ _
+2 _finishMoveLeft_ -> _finishMoveLeft_ 2
+9 _finishMoveLeft_ -> _finishMoveLeft_ 9
+5 _finishMoveLeft_ -> _finishMoveLeft_ 5
+1 _finishMoveLeft_ -> _finishMoveLeft_ 1
+_copyMoveRight_ _finishMoveLeft_ -> _finishMoveLeft_ _copyMoveRight_
+_numberDelimiter_ _finishMoveLeft_ -> _finishMoveLeft_ _numberDelimiter_
+_carry[0]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[0]_
+_startCopy_ _finishMoveLeft_ -> _finishMoveLeft_ _startCopy_
+_minus_ _finishMoveLeft_ -> _finishMoveLeft_ _minus_
 8 _finishMoveLeft_ -> _finishMoveLeft_ 8
 _carry[7]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[7]_
-_copyDelimiter_ _finishMoveLeft_ -> _finishMoveLeft_ _copyDelimiter_
+_carry[1]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[1]_
 _startSub_ _finishMoveLeft_ -> _finishMoveLeft_ _startSub_
-_carry[3]_ _finishMoveLeft_ -> _finishMoveLeft_ _carry[3]_
-_finishMoveLeft_ _finishMoveLeft_ -> _finishMoveLeft_ _finishMoveLeft_
-_end_ _finishMoveLeft_ -> _finishMoveLeft_ _end_
-6 _finishMoveLeft_ -> _finishMoveLeft_ 6
 _finishMoveRight_ _finishMoveLeft_ -> _finishMoveLeft_ _finishMoveRight_
-_current_ _finishMoveLeft_ -> _finishMoveLeft_ _current_
-_finishMoveRight_ 2 -> _finishMoveRight_
-_finishMoveRight_ _carry[0]_ -> _finishMoveRight_
-_finishMoveRight_ _carry[2]_ -> _finishMoveRight_
-_finishMoveRight_ _carry[4]_ -> _finishMoveRight_
+_finishMoveRight_ \n -> _finishMoveRight_
 _finishMoveRight_ 0 -> _finishMoveRight_
-_finishMoveRight_ _carry[5]_ -> _finishMoveRight_
-_finishMoveRight_ 5 -> _finishMoveRight_
-_finishMoveRight_ _startCopy_ -> _finishMoveRight_
-_finishMoveRight_ _carry[1]_ -> _finishMoveRight_
-_finishMoveRight_ 7 -> _finishMoveRight_
-_finishMoveRight_ _carry[9]_ -> _finishMoveRight_
-_finishMoveRight_ 1 -> _finishMoveRight_
-_finishMoveRight_ 9 -> _finishMoveRight_
-_finishMoveRight_ _numberDelimiter_ -> _finishMoveRight_
-_finishMoveRight_ _terminate_ -> _finishMoveRight_
-_finishMoveRight_ _subMoveRight_ -> _finishMoveRight_
-_finishMoveRight_ _awaitSub_ -> _finishMoveRight_
+_finishMoveRight_ _carry[6]_ -> _finishMoveRight_
 _finishMoveRight_ _start_ -> _finishMoveRight_
-_finishMoveRight_ _copyMoveRight_ -> _finishMoveRight_
+_finishMoveRight_ _carry[2]_ -> _finishMoveRight_
+_finishMoveRight_ 3 -> _finishMoveRight_
+_finishMoveRight_ _terminate_ -> _finishMoveRight_
+_finishMoveRight_ _carry[9]_ -> _finishMoveRight_
 _finishMoveRight_ _copyMoveLeft_ -> _finishMoveRight_
 _finishMoveRight_ _awaitCopy_ -> _finishMoveRight_
-_finishMoveRight_ _finish_ -> _finishMoveRight_
-_finishMoveRight_ _carry[6]_ -> _finishMoveRight_
-_finishMoveRight_ 3 -> _finishMoveRight_
-_finishMoveRight_ _minus_ -> _finishMoveRight_
+_finishMoveRight_ _carry[5]_ -> _finishMoveRight_
+_finishMoveRight_ 7 -> _finishMoveRight_
 _finishMoveRight_ _carry[8]_ -> _finishMoveRight_
+_finishMoveRight_ _end_ -> _finishMoveRight_
+_finishMoveRight_ _finish_ -> _finishMoveRight_
+_finishMoveRight_ _carry[4]_ -> _finishMoveRight_
+_finishMoveRight_ _copyDelimiter_ -> _finishMoveRight_
+_finishMoveRight_ _subMoveRight_ -> _finishMoveRight_
+_finishMoveRight_ 6 -> _finishMoveRight_
+_finishMoveRight_ _finishMoveLeft_ -> _finishMoveRight_
+_finishMoveRight_ _awaitSub_ -> _finishMoveRight_
+_finishMoveRight_ _current_ -> _finishMoveRight_
+_finishMoveRight_ _carry[3]_ -> _finishMoveRight_
 _finishMoveRight_ 4 -> _finishMoveRight_
-_finishMoveRight_ _ -> _finishMoveRight_
+_finishMoveRight_ 2 -> _finishMoveRight_
+_finishMoveRight_ 9 -> _finishMoveRight_
+_finishMoveRight_ 5 -> _finishMoveRight_
+_finishMoveRight_ 1 -> _finishMoveRight_
+_finishMoveRight_ _copyMoveRight_ -> _finishMoveRight_
+_finishMoveRight_ _numberDelimiter_ -> _finishMoveRight_
+_finishMoveRight_ _carry[0]_ -> _finishMoveRight_
+_finishMoveRight_ _startCopy_ -> _finishMoveRight_
+_finishMoveRight_ _minus_ -> _finishMoveRight_
 _finishMoveRight_ 8 -> _finishMoveRight_
 _finishMoveRight_ _carry[7]_ -> _finishMoveRight_
-_finishMoveRight_ _copyDelimiter_ -> _finishMoveRight_
+_finishMoveRight_ _carry[1]_ -> _finishMoveRight_
 _finishMoveRight_ _startSub_ -> _finishMoveRight_
-_finishMoveRight_ _carry[3]_ -> _finishMoveRight_
-_finishMoveRight_ _finishMoveLeft_ -> _finishMoveRight_
-_finishMoveRight_ _end_ -> _finishMoveRight_
-_finishMoveRight_ 6 -> _finishMoveRight_
 _finishMoveRight_ _finishMoveRight_ -> _finishMoveRight_
-_finishMoveRight_ _current_ -> _finishMoveRight_
 _terminate_=>
 _numberDelimiter_ 0 0 -> _numberDelimiter_ 0
 _numberDelimiter_ 0 1 -> _numberDelimiter_ 1

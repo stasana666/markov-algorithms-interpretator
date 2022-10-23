@@ -23,16 +23,8 @@ MarkovMachine::MarkovMachine(istream& in) {
     }
 }
 
-void sleepOnEnter() {
-    string s;
-    getline(cin, s);
-}
-
 void MarkovMachine::apply(string& text) const {
-    while (tryStep(text)) {
-        //cout << text << endl;
-        //sleepOnEnter();
-    }
+    while (tryStep(text));
 }
 
 bool MarkovMachine::tryStep(string& text) const {
@@ -46,17 +38,23 @@ bool MarkovMachine::tryStep(string& text) const {
 
 string MarkovMachine::processString(const string& s) {
     string res;
+    bool isEscaping = false;
     for (char ch : s) {
-        if (ch == ' ') {
-            continue;
+        if (isEscaping) {
+            if (ch == 'n') {
+                res.push_back('\n');
+            }
+            isEscaping = false;
+        } else {
+            if (ch == ' ' || ch == '\n' || ch == '\r') {
+                continue;
+            }
+            if (ch == '\\') {
+                isEscaping = true;
+                continue;
+            }
+            res.push_back(ch);
         }
-        if (ch == '\n') {
-            continue;
-        }
-        if (ch == '\r') {
-            continue;
-        }
-        res.push_back(ch);
     }
     return res;
 }
